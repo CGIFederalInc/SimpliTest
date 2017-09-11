@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+## Run rake tasks and cucumber features
+## from SimpliTest once it's installed.
+#
+# Example:
+#
+#   SimpliTest init
+#   SimpliTest new ProjectName
+#   SimpliTest "document[html]"
+
+require 'SimpliTest/cli/main'
+pwd = Dir.pwd
+gem_dir = File.expand_path('..', File.dirname(__FILE__))
+command, *arguments = ARGV.dup
+$LOAD_PATH.unshift gem_dir
+options = {
+  :pwd => pwd,
+  :gem_dir => gem_dir,
+  :command => command,
+  :arguments => arguments
+}
+SimpliTest::Cli::Main.new(options).execute!

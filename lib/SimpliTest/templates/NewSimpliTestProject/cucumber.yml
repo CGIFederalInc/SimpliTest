@@ -1,0 +1,26 @@
+# This file lets you create shortcuts for running your test suite.
+# The simplest use case for this would be when you have multiple environments (in the environments.yml file)
+# then you might want to create different profiles for each environment as such:
+# production: "ENVIRONMENT=Production -r features/support features"
+# testing: "ENVIRONMENT=Testing -r features/support features"
+# devb1: "ENVIRONMENT=DEVB1 -r features/support features"
+# Then you can run your tests against those environments with commands like these:
+# cucumber --profile testing
+# cucumber --profile devb1
+#
+# For a full description of options available here check out: https://github.com/cucumber/cucumber/wiki/cucumber.yml
+#
+<% common = '-r features/support features ' %>
+<% html = '--format html -o results.html ' %>
+<% test_number = ENV['TEST_ENV_NUMBER'].nil? || ENV['TEST_ENV_NUMBER'].empty? ? '1' : ENV['TEST_ENV_NUMBER'] %>
+<% parallel = "--format json -o results-#{test_number}.json " %>
+<% without_wip = '--tags ~@wip ' %>
+parallel: <%= parallel + without_wip + common %>
+
+# *********************************************************************************************
+# DO NOT DELETE OR MODIFY ANYTHING ABOVE THIS LINE
+# *********************************************************************************************
+default: <%=  without_wip + html + common %>
+production: ENVIRONMENT=Production <%= without_wip + html + common %>
+test: ENVIRONMENT=Test <%= without_wip + html + common %>
+dev: ENVIRONMENT=Dev <%= without_wip + html + common %>

@@ -1,0 +1,26 @@
+# This file is used to manage some global settings for your test project.
+# This file must be valid YAML
+# You can read about YAML syntax here: http://www.ansibleworks.com/docs/YAMLSyntax.html
+# This YAML checker may come in handy too: http://yamllint.com/
+# *********************************************************************************************
+
+---
+DEFAULT_DATE_FORMAT: mm/dd/yyyy # Supports any combination of mm, dd, yyyy or yy Set a default format for date helpers to be used in expressions like "Today's Date" in the framework..
+DEFAULT_ENVIRONMENT: Production #The default environment tests will be run against when none is supplied
+MAX_WAIT_TIME: 2  #seconds. When a test fails because of a potential issue with DOM loading, the framework will retry running the test for this much time. If your application is slow, feel free to increase this time and see if it reduces failures.
+MIN_WAIT_TIME: 0  #seconds. Used when validating absence of a DOM element, typically this is shorter than the default wait time, since we don't want to wait too long for elements we are not expecting will be present
+HTTP_TIMEOUT: 3 # this is the default number of seconds SimpliTest will wait for either a connection to be open or to receive a valid http response, when using the "all links on this page are valid" step. This does not apply to other HTTP requests within SimpliTest, but that might change in the future.
+WAIT_FOR_PAGE_LOAD: 0 #seconds. Wait for so many seconds everytime a new page is loaded
+SCREEN_SIZE: Desktop # also accepts values like Tablet, Mobile and Landscape
+DRIVER: chrome #change this to phantomjs to run in headless mode, other options include: chrome, phantomjs, ie, selenium
+MODE: REGULAR #change this to DEBUG to see detailed console output
+DESKTOP_MAX_HEIGHT: 980
+DESKTOP_MAX_WIDTH: 2000
+MOBILE_MAX_HEIGHT: 868
+MOBILE_MAX_WIDTH: 362
+TABLET_MAX_HEIGHT: 868
+TABLET_MAX_WIDTH: 814
+LANDSCAPE_MAX_HEIGHT: 362
+LANDSCAPE_MAX_WIDTH: 522
+QUIT_ON_FAIL: false
+

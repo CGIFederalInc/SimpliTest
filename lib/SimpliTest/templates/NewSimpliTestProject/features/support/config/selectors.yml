@@ -1,0 +1,44 @@
+# This file is used to manage selectors for the test project.
+# Selectors are used to look up specific elements in the HTML page.
+#
+# An element can be anything enclosed in a valid HTML tag, for example:
+# <div id="map"></div> is an element and so is:
+#
+# When performing tests it is sometimes useful to be able to refer to a specific element.
+# In most cases you can do this by referencing the Name or the label of the element. For example:
+# to click a button with the name "Search" you can simply write a step:
+#
+# And I click on the "Search" button
+#
+#  and this will work on most web pages without any special set up. The framework here is making an intelligent guess
+#  about what you mean based on some common web standards. Sometimes these guesses are not accurate (like when you have two Search buttons on the same page) or worse the framework
+#  just refuses to guess (when attributes like name, id or label are not correctly set in the DOM). In such cases you would need to specify a selector in this file.
+#
+# For example in the step:
+#
+#  Then I should see "correct results" within "ResultsTable"
+#
+# You might have to first set up a selector called "ResultsTable" in this file.
+# You can set up selectors using xpath or a css selector. For a better understanding of
+# xpath try: http://www.w3schools.com/xpath/ and
+# css selectors: http://www.w3schools.com/cssref/css_selectors.asp
+#
+# It is always preferred to use the CSS selectors where possible. CSS Selectors are faster and work better with resource constrained mobile devices.
+# You can add a css selector for a table element in the web page:
+# <table id='resultsTable'>....</table>
+# like this:
+# ResultsTable: "css:table#resultsTable"
+#
+# If you need to use xpath then for the same table element it will be:
+# ResultsTable: "xpath:/html/body/table[@id='resultsTable']"
+#
+# This file must be valid YAML
+# You can read about YAML syntax here: http://www.ansibleworks.com/docs/YAMLSyntax.html
+# This YAML checker may come in handy too: http://yamllint.com/
+# *********************************************************************************************
+
+---
+Header1CSS: "css:html > body > table > tbody > tr > th:first-child"
+Header2Xpath: "xpath:/html/body/table/tbody/tr[1]/th[2]"
+SquirrelImageCSS: "css:img"
+SquirrelImageXpath: "xpath:/html/body/img[1]"

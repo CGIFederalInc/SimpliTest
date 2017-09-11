@@ -1,0 +1,26 @@
+# This file is used to manage paths to the various pages in the your application. 
+# Paths set here can be refered to by their name in steps such as:
+#             Given I am on the "form" page
+#                      OR
+#             Then I should be redirected to the "other" page
+# Both "form" and "other" in these examples are looked up in this file during test case execution. 
+# If they are not found, the test case will fail.
+# You can provide both full URLs and relative paths in this file. For example, you can point to external links
+# like this:
+# google_maps: http://maps.google.com
+# When providing URLs, you must provide the full URL (including http or https)
+# In most cases though, it makes more sense to simply provide a relative path like:
+#  search: '/search.html'
+# If the current environment is set to:
+#  Production: 'http://your production url.com'
+# Then the "search" page in this example is understood to be
+#   'http://your production url.com/search.html'
+# This file must be valid YAML
+# You can read about YAML syntax here: http://www.ansibleworks.com/docs/YAMLSyntax.html
+# This YAML checker may come in handy too: http://yamllint.com/
+# *********************************************************************************************
+
+---
+form: form/page
+home: ""
+other: other/page

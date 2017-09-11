@@ -1,0 +1,14 @@
+#initialize variables
+<% common = "ENVIRONMENT=Heroku -r features/support  -r features/step_definitions " %>
+<% phantom = "-r features/profiles/phantom.rb " %>
+<% selenium = "-r features/profiles/selenium.rb " %>
+<% chrome = "-r features/profiles/chrome.rb " %>
+<% firefox = "-r features/profiles/firefox.rb " %>
+<% steps = "--tags @steps " %>
+<% test_number = ENV['TEST_ENV_NUMBER'].nil? || ENV['TEST_ENV_NUMBER'].empty? ? 1 : ENV['TEST_ENV_NUMBER'] %>
+#create profiles
+selenium:    <%= common + steps + selenium %>  features
+firefox:    <%= common + steps + selenium %>  features
+phantom: <%= common + steps + phantom  %> features
+chrome: <%= common + steps + chrome%> features
+parallel: <%= common + steps + selenium %> --format html --out results-<%= test_number %>.html

@@ -1,0 +1,28 @@
+* { 
+  margin: 0; 
+  padding: 0; 
+}
+body { 
+  font: 14px/1.4 Georgia, Serif; 
+}
+p {
+  margin: 20px 0; 
+}
+
+/* 
+Generic Styling, for Desktops/Laptops 
+ */
+  table { 
+    width: 100%; 
+    border-collapse: collapse; 
+  }
+  th { 
+    background: #333; 
+    color: white; 
+    font-weight: bold; 
+  }
+  td, th { 
+    padding: 6px; 
+    border: 1px solid #ccc; 
+    text-align: left; 
+  }

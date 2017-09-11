@@ -1,0 +1,11 @@
+# This file is used to manage some global settings for your test project. 
+# This file must be valid YAML
+# You can read about YAML syntax here: http://www.ansibleworks.com/docs/YAMLSyntax.html
+# This YAML checker may come in handy too: http://yamllint.com/
+# *********************************************************************************************
+
+---
+Production: "http://replace  with production environment url .com/"
+Test: "http://replace  with test environment url .com/"
+Dev: "http://replace  with dev environment url .com/"
+Staging: "http://replace with staging environment url .com/"
