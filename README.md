@@ -1,5 +1,5 @@
 # SimpliTest 
-SimpliTest was create by CGI Group Inc. members to accelerate the adoption of ATDD/BDD using Cucumber/Gherkin as the base framework. At it's core are many predefined step definitions backed by helper and utility methods.  Mainly focused on the web interfaces using Selenium, but not restricted to only web apps, your imagination is it's limitation.
+SimpliTest (formerly known as Café) was create by CGI Group Inc. members to accelerate the adoption of ATDD/BDD using Cucumber/Gherkin as the base framework. At it's core are many predefined step definitions backed by helper and utility methods.  Mainly focused on the web interfaces using Selenium, but not restricted to only web apps, your imagination is it's limitation.
 
 ## Installation 
 
@@ -17,6 +17,3 @@ SimpliTest was create by CGI Group Inc. members to accelerate the adoption of AT
 		$SimpliTest run
 		$SimpliTest smoketest
 		
-
-
-
