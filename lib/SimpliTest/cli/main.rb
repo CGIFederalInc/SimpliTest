@@ -293,9 +293,37 @@ module SimpliTest
 
         def help_text
           #TODO: Write a man page
-          'You have been helped!!'
-        end
+%Q(Usage: SimpliTest [options] 
+          
+    Examples:
+          SimpliTest run features/specifications/test.feature  'run just the give one
+          SimpliTest run --tags @tests  'runs all with the @tests tag
+          SimpliTest run ' runs all of them
 
+    Options:
+          help                      - This screen
+          version                   - Version
+          init                      - Initialize this directory as a project workspace for SimpliTest
+          new <directory name>      - Create a new SimpliTest project within directory provided
+          run <file path> <cucumber flags>  - Run a feature also pass any cucumber flags, see cucumber --help
+         )
+          # create_update_task
+          # document
+          # document[csv]
+          # document[html]
+          # focustest
+          # generate_npp_plugin
+          # generate_registries
+          # parallel
+          # run_feature
+          # sauce
+          # setup
+          # smoketest
+          # testinstall
+          # testproject
+          # update
+          # validate_service
+        end
 
       end #end self << class. Any methods below this are instance methods
     end#end Main
