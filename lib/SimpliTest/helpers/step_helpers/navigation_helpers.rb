@@ -190,6 +190,16 @@ module NavigationHelpers
   def comparable_urls_for(target_url, source_url)
     is_url?(target_url) ? [target_url, source_url].map{|u| normalize(u)} : [target_url, URI.parse(source_url).path]
   end
+  
+  def wait_jquery_to_complete()
+    wait = Selenium::WebDriver::Wait.new(:timeout => 60)
+    wait.until {any_jquery_running}
+  end
+  
+  def any_jquery_running
+    evaluate_script("!window.jQuery") || evaluate_script("jQuery.active").zero? rescue "unexpected error checking jquery"
+  end
+
 
 end
 
