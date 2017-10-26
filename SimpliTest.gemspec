@@ -36,7 +36,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "launchy", "2.4.3"
   spec.add_dependency "rake", "10.4.2"
   spec.add_dependency 'parallel_tests', "1.9"
-  spec.add_dependency 'tiny_tds', "0.7"
+  spec.add_dependency 'tiny_tds', "~> 2.0"
   spec.add_dependency 'rest-client', "~> 0"
  spec.add_dependency "axe-matchers", "1.3.4"
   end
