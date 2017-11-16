@@ -30,7 +30,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "geminabox", "~> 0"
 
   spec.add_dependency "rake", "~> 10.4"
-  spec.add_dependency "cucumber", "~> 2.1"
+  spec.add_dependency "cucumber", "2.1.0"
   spec.add_dependency "poltergeist", "1.7.0"
   spec.add_dependency "capybara", "~> 2.5"
   spec.add_dependency "rspec", "~> 3.7"
