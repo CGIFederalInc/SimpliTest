@@ -32,7 +32,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "rake", "~> 10.4"
   spec.add_dependency "cucumber", "2.1.0"
   spec.add_dependency "poltergeist", "1.7.0"
-  spec.add_dependency "capybara", "~> 2.5"
+  spec.add_dependency "capybara", "2.5"
   spec.add_dependency "rspec", "~> 3.7"
   spec.add_dependency "selenium-webdriver", "~> 3.2"
   spec.add_dependency "launchy", "~> 2.4"
