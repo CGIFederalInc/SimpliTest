@@ -300,10 +300,6 @@ page.driver.browser.switch_to.alert.accept
   #accept_confirmation
 end
 
-#Example: And I switch to the iframe
-And /^(?:|I )[Ss]witch to the iframe$/ do
-  page.driver.browser.switch_to.frame(0)
-end
 
 #************************ END MODAL AND DIALOGS **********************************
 

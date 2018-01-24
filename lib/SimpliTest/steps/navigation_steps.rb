@@ -44,4 +44,15 @@ Then /^(?:|I )[Dd]ismiss (?:|the )popup(?:| window)$/ do
   page.driver.browser.switch_to.alert.dismiss rescue Selenium::WebDriver::Error::NoAlertPresentError
 end
 
+
+#Example: And I switch to the iframe
+And /^(?:|I )[Ss]witch to the iframe$/ do
+  page.driver.browser.switch_to.frame(0)
+end
+
+#Example: And I switch to the last_iframe
+And /^(?:|I )[Ss]witch to the last_iframe$/ do
+  page.driver.browser.switch_to.parent_frame
+    
+end
 #-------------------------------------------------------
