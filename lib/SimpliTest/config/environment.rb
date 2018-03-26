@@ -23,7 +23,7 @@ profiles = {
   'chrome' => 'chrome',
   'selenium' => 'selenium',
   'ie' => 'internet_explorer',
-  'fire' => 'firefox'
+  'firefox' => 'firefox'
 }
 profile = File.join profiles_dir, profiles[driver]
 require profile
