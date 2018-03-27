@@ -12,7 +12,7 @@ MIN_WAIT_TIME: 0  #seconds. Used when validating absence of a DOM element, typic
 HTTP_TIMEOUT: 3 # this is the default number of seconds SimpliTest will wait for either a connection to be open or to receive a valid http response, when using the "all links on this page are valid" step. This does not apply to other HTTP requests within SimpliTest, but that might change in the future.
 WAIT_FOR_PAGE_LOAD: 0 #seconds. Wait for so many seconds everytime a new page is loaded
 SCREEN_SIZE: Desktop # also accepts values like Tablet, Mobile and Landscape
-DRIVER: chrome #change this to phantomjs to run in headless mode, other options include: chrome, phantomjs, ie, selenium
+DRIVER: chrome #change this to phantomjs to run in headless mode, other options include: chrome, phantomjs, ie, firefox
 MODE: REGULAR #change this to DEBUG to see detailed console output
 DESKTOP_MAX_HEIGHT: 980
 DESKTOP_MAX_WIDTH: 2000

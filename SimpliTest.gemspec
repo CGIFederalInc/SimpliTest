@@ -3,6 +3,7 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'version'
 
+
 Gem::Specification.new do |spec|
   spec.name          = "SimpliTest"
   spec.version       = SimpliTest::VERSION
@@ -13,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/CGIFederalInc/SimpliTest"
   spec.license       = "MIT"
 
-  spec.files		 = Dir['lib/**/*'] + Dir['features/**/*'] + Dir['bin/*'] + ["SimpliTest.gemspec","README.md"] + Dir['test/**/*']
+  spec.files     = Dir['lib/**/*'] + Dir['features/**/*'] + Dir['bin/*'] + ["SimpliTest.gemspec","README.md"] + Dir['test/**/*']
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
@@ -35,10 +36,11 @@ Gem::Specification.new do |spec|
   spec.add_dependency "poltergeist", "1.7.0"
   spec.add_dependency "capybara", "2.5"
   spec.add_dependency "rspec", "~> 3.7"
-  spec.add_dependency "selenium-webdriver", "~> 3.2"
+  spec.add_dependency "selenium-webdriver", "3.11.0", "~> 3.11.0"
   spec.add_dependency "launchy", "~> 2.4"
   spec.add_dependency 'parallel_tests', "~> 1.9"
   spec.add_dependency 'tiny_tds', "~> 2.0"
   spec.add_dependency 'rest-client', "~> 0"
   spec.add_dependency "axe-matchers", "~> 2.0", ">= 2.0.0"
-  end
+
+end
