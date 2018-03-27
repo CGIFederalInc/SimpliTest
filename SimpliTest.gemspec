@@ -40,5 +40,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'parallel_tests', "~> 1.9"
   spec.add_dependency 'tiny_tds', "~> 2.0"
   spec.add_dependency 'rest-client', "~> 0"
- spec.add_dependency "axe-matchers", "~> 1.3"
+  spec.add_dependency "axe-matchers", "~> 2.0", ">= 2.0.0"
   end
