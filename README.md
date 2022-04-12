@@ -3,7 +3,8 @@ SimpliTest (formerly known as Café) was created by CGI Group Inc. members to acc
 
 ## Installation 
 
-	1) Install Ruby & DevKit: https://rubyinstaller.org/downloads/
+	1) Install Ruby & DevKit version 2.6.1.9 (does not work with 3.x)
+		- https://rubyinstaller.org/downloads/
 	
 	2) Download Selenium drivers and place them in Ruby bin
 		- http://www.seleniumhq.org/projects/webdriver/
